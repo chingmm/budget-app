@@ -9,8 +9,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    width: 1000px;
 }
 
 .summary {
@@ -34,10 +33,58 @@ body {
     justify-content: space-evenly;
 }
 
-#head-img {
+#title {
+    padding: 0 0 10px 0;
+    margin: 0px;
+}
+
+#income {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border: 2px solid darkgreen;
     width: 200px;
+    height: 200px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 1.5ex;
+}
+
+#expense {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border: 2px solid darkred;
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 1.5ex;
+}
+
+#input-box {
+    width: 190px;
+    padding: .375rem .25rem;
+}
+
+.transactions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .summary-img {
     width: 75px;
+}
+
+#head-img {
+    width: 200px;
+}
+
+h3 {
+    text-decoration: underline;
+    font-weight: bolder;
 }
