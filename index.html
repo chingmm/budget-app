@@ -9,24 +9,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Budget App - Can You Afford It?</h1>
+    <img id = "head-img" src="https://image.flaticon.com/icons/svg/3348/3348765.svg" alt="">
+    <h1>CAN YOU AFFORD IT?</h1>
     <div class = "container">
         <div class = "summary">
-            <div>Income</div>
-            <div>Expenses</div>
-            <div>Balance</div>
+            <div class = "summary-components">
+                INCOME
+                <img class = "summary-img" src="https://image.flaticon.com/icons/svg/3004/3004164.svg" alt="">
+            </div>
+            <div class = "summary-components">
+                EXPENSES
+                <img class = "summary-img" src="https://image.flaticon.com/icons/svg/2855/2855431.svg" alt="">
+            </div>
+            <div class = "summary-components">
+                BALANCE
+                <img class = "summary-img" src="https://image.flaticon.com/icons/svg/2488/2488916.svg" alt="">
+            </div>
         </div>
-        <div class = "income-section">
-            <form id = income>
-                <input type="text" name="" value="" id="input-box">
-                <button type="submit" name="button" id="submit">ADD</button>
-              </form>
-        </div>
-        <div class = "expense-section">
-            <form id = expense>
-                <input type="text" name="" value="" id="input-box">
-                <button type="submit" name="button" id="submit">ADD</button>
-              </form>
+        <div class = "details">
+            <div class = "income-section">
+                <h3>Income</h3>
+                <form id = income>
+                    <input type="text" name="" value="" id="input-box">
+                    <button type="submit" name="button" id="submit">ADD</button>
+                </form>
+                <ul></ul>
+            </div>
+            <div class = "expense-section">
+                <h3>Expenses</h3>
+                <form id = expense>
+                    <input type="text" name="" value="" id="input-box">
+                    <button type="submit" name="button" id="submit">ADD</button>
+                </form>
+                <ul></ul>
+            </div>
         </div>
     </div>
 </body>
