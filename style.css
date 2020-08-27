@@ -74,6 +74,8 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    width: 1000px;
+    
 }
 
 .summary-img {
@@ -87,4 +89,15 @@ body {
 h3 {
     text-decoration: underline;
     font-weight: bolder;
+}
+
+.income-items {
+    display:flex;
+    flex-direction: column;
+}
+
+.income-transaction {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
 }
