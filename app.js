@@ -1,22 +1,9 @@
-console.log("Hello")
-
-// const transactions = []
-
-// let incomeAmount = 0
-
-// console.log($("#income-amount").val())
-
-// $("#income-amount").on("submit", (event) => {
-//     event.preventDefault()
-
-//     incomeAmount = $("#income-amount").val()
-// })
-
-// console.log(incomeAmount)
-
 const incomeSubmit = (event) => {
     console.log(event)
+    console.log($(event.currentTarget))
+    console.log($('#income-amount').val())
+    console.log($('#income-text').val())
     event.preventDefault()
 }
 
-$('#income').on('submit', incomeSubmit())
+$('#income').on('submit', incomeSubmit)
