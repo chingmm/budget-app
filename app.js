@@ -1,19 +1,40 @@
 // Transactions List
-const transactionAmounts = []
-const transactionTexts = []
+const transactionIncomeAmounts = []
+const transactionIncomeTexts = []
 
-const render = () => {
+const transactionExpenseAmounts = []
+const transactionExpenseTexts = []
+
+// Render portions
+const renderIncome = () => {
+    
+    // Income submissions
     let $incomeDiv = $('<div>').addClass('income-transaction')
     
-    let $incomeAmountItem = $incomeDiv.append($("<div>" + transactionAmounts[transactionAmounts.length - 1] + "</div>"))
-    let $incomeTextItem = $incomeDiv.append($("<div>" + transactionTexts[transactionTexts.length - 1] + "</div>"))
+    let $incomeAmountItem = $incomeDiv.append($("<div>" + "$" + transactionIncomeAmounts[transactionIncomeAmounts.length - 1] + "</div>"))
+    let $incomeTextItem = $incomeDiv.append($("<div>" + transactionIncomeTexts[transactionIncomeTexts.length - 1] + "</div>"))
 
     $incomeAmountItem.children().eq(0).addClass('amount')
-    $('.income-items').children().eq(0).append($incomeAmountItem)
+    $('.income-items').append($incomeAmountItem)
 
     $incomeTextItem.children().eq(1).addClass('text')
-    $('.income-items').children().eq(0).append($incomeTextItem)
+    $('.income-items').append($incomeTextItem)
 
+}
+
+const renderExpense = () => {
+
+    // Expense submissions
+    let $expenseDiv = $('<div>').addClass('expense-transaction')
+    
+    let $expenseAmountItem = $expenseDiv.append($("<div>" + "$" + transactionExpenseAmounts[transactionExpenseAmounts.length - 1] + "</div>"))
+    let $expenseTextItem = $expenseDiv.append($("<div>" + transactionExpenseTexts[transactionExpenseTexts.length - 1] + "</div>"))
+
+    $expenseAmountItem.children().eq(0).addClass('amount')
+    $('.expense-items').append($expenseAmountItem)
+
+    $expenseTextItem.children().eq(1).addClass('text')
+    $('.expense-items').append($expenseTextItem)
 
 }
 
@@ -21,20 +42,11 @@ const render = () => {
 // Event Handler for Income Submission
 const incomeSubmit = (event) => {
     event.preventDefault()
-    // console.log(event)
-    // console.log($(event.currentTarget))
-    // console.log($('#income-amount').val())
-    // console.log($('#income-text').val())
-    // console.log($('.income-items'))
-
-    transactionAmounts.push($('#income-amount').val())
-    transactionTexts.push($('#income-text').val())
+    transactionIncomeAmounts.push($('#income-amount').val())
+    transactionIncomeTexts.push($('#income-text').val())
     $(event.currentTarget).trigger('reset')
-    render()
-    
-    // let $incomeItem = $('.income-items').children().append($('<div>')).addClass('income-transaction')
-    // $incomeItem.text($('#income-amount').val())
-    // // .append('#income-text').val().addClass('income-transaction')
+    renderIncome()
+
 }
 
 $('#income').on('submit', incomeSubmit)
@@ -43,12 +55,10 @@ $('#income').on('submit', incomeSubmit)
 // Event Handler for Expense Submission
 const expenseSubmit = (event) => {
     event.preventDefault()
-    // console.log(event)
-    // console.log($(event.currentTarget))
-    console.log($('#expense-amount').val())
-    console.log($('#expense-text').val())
-
-    // render()
+    transactionExpenseAmounts.push($('#expense-amount').val())
+    transactionExpenseTexts.push($('#expense-text').val())
+    $(event.currentTarget).trigger('reset')
+    renderExpense()
 }
 
 $('#expense').on('submit', expenseSubmit)

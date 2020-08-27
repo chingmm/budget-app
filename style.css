@@ -92,12 +92,34 @@ h3 {
 }
 
 .income-items {
-    display:flex;
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
 }
 
 .income-transaction {
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text {
+    display: flex;
+    justify-content: flex-start;
+    width: 100px;
+}
+
+
+.expense-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
+}
+
+.expense-transaction {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
