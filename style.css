@@ -64,7 +64,7 @@ body {
     border-radius: 1.5ex;
 }
 
-#input-box {
+.input-box {
     width: 190px;
     padding: .375rem .25rem;
 }
