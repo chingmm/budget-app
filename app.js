@@ -71,7 +71,7 @@ const expenseSubmit = (event) => {
     event.preventDefault()
     transactionExpenseAmounts.push($('#expense-amount').val())
     transactionExpenseTexts.push($('#expense-text').val())
-    $('#expense-total').text($expenseTotal += parseInt($('#expense-amount').val()))
+    $('#expense-total').text($expenseTotal -= parseInt($('#expense-amount').val()))
     $('#balance-total').text($balanceTotal -= parseInt($('#expense-amount').val()))
     $(event.currentTarget).trigger('reset')
     renderExpense()
