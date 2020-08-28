@@ -80,6 +80,17 @@ const expenseSubmit = (event) => {
 $('#expense').on('submit', expenseSubmit)
 
 
+// API urls
+
+// County and State
+// https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME&for=county:*&in=state:*&key=89452c179f005fd7873c90db6fca27e755ee3466
+
+// State
+// https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME&for=state:*&key=89452c179f005fd7873c90db6fca27e755ee3466
+
+// Housing cost distribution and median cost
+// https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME,CP04_2014_2018_094E,CP04_2014_2018_095E,CP04_2014_2018_096E,CP04_2014_2018_097E,CP04_2014_2018_098E,CP04_2014_2018_099E,CP04_2014_2018_100E,CP04_2014_2018_101E&for=state:17&key=89452c179f005fd7873c90db6fca27e755ee3466
+
 
 
 
