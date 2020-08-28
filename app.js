@@ -89,7 +89,26 @@ $('#expense').on('submit', expenseSubmit)
 // https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME&for=state:*&key=89452c179f005fd7873c90db6fca27e755ee3466
 
 // Housing cost distribution and median cost
+// < 500
+// 500 - $999
+// 1000 - 1499
+// 1500 - 1999
+// 2000 - 2499
+// 2500 - 2999
+// > 3000
+// Median
 // https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME,CP04_2014_2018_094E,CP04_2014_2018_095E,CP04_2014_2018_096E,CP04_2014_2018_097E,CP04_2014_2018_098E,CP04_2014_2018_099E,CP04_2014_2018_100E,CP04_2014_2018_101E&for=state:17&key=89452c179f005fd7873c90db6fca27e755ee3466
+
+// Rent cost distribution and median cost
+// < 500
+// 500 - $999
+// 1000 - 1499
+// 1500 - 1999
+// 2000 - 2499
+// 2500 - 2999
+// > 3000
+// Median
+// https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME,CP04_2014_2018_127E,CP04_2014_2018_128E,CP04_2014_2018_129E,CP04_2014_2018_130E,CP04_2014_2018_131E,CP04_2014_2018_132E,CP04_2014_2018_133E,CP04_2014_2018_134E&for=state:17&key=89452c179f005fd7873c90db6fca27e755ee3466
 
 
 
