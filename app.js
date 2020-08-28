@@ -80,6 +80,25 @@ const expenseSubmit = (event) => {
 $('#expense').on('submit', expenseSubmit)
 
 
+
+// Median Housing Cost and Distribution of Housing Prices
+
+// Pulls state
+$.ajax({
+    url:`https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME&for=state:*&key=89452c179f005fd7873c90db6fca27e755ee3466`
+}).then(
+    (data) => {
+        for (let i = 1; i < data.length; i++){
+        console.log(data[i][0])
+        }
+    },
+    () => {
+        console.log("bad request")
+    }
+)
+
+
+
 // API urls
 
 // County and State

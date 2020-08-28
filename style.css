@@ -126,3 +126,15 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
 }
+
+
+
+/* Dropdown Menu */
+#state {
+    min-height:190px; 
+    overflow-y :auto; 
+    overflow-x:hidden; 
+    position:absolute;
+    width:300px;
+    /* display: contents; */
+ }
