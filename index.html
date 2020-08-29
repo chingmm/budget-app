@@ -11,6 +11,94 @@
 <body>
     <div class = "container">
         <img id = "head-img" src="https://image.flaticon.com/icons/svg/3348/3348765.svg" alt="">
+        <h1>COST OF LIVING ESTIMATES</h1>
+        <img class = "summary-img" src="https://image.flaticon.com/icons/svg/1738/1738292.svg" alt="">
+        <div class = "select-area">
+            <form id = "place-search">
+                <h5 id = "search">Search State</h5>
+                <input type="text" placeholder="Ex: Illinois" class="place-input-box" id = "state">
+                <h5 id = "search">Search County</h5>
+                <input type="text" placeholder="Ex: Cook County, Illinois" class="place-input-box" id = "county">
+                <h5 id = "search">Search Place</h5>
+                <input type="text" placeholder="Ex: Palatine Village, Illinois" class="place-input-box" id = "county">
+            </form>
+        </div>
+        <div class = "housing-cost">
+            <h3 id = "median-cost">Median Monthly Housing Costs</h3>
+            <div id = "median-cost">
+                <div id = "mortgage">
+                    <h4>Median Mortgage</h4>
+                    <div id = "median-mortgage">
+                        <span>$</span>
+                        <span>0</span>
+                    </div>
+                </div>
+                <div id = "rent">
+                    <h4>Median Rent</h4>
+                    <div id = "median-rent">
+                        <span>$</span>
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+            <h3>Housing Costs Distribution</h3>
+            <div class = "standard-distribution">
+                <div id = "mortgage">
+                    <h4>Mortgage Costs</h4>
+                        <div id = "distribution">
+                            <div id = "text">< $500</div>
+                            <div><span id = "1">0</span><span>%</span></div>
+                        </div>
+                        <div id = "distribution">
+                            <div>$500 to $999</div>
+                            <div><span id = "2">0</span><span>%</span></div>
+                        </div>
+                        <div id = "distribution">
+                            <div>$1,000 to $1,499</div>
+                            <div><span id = "3">0</span><span>%</span></div>
+                        </div>
+                        <div id = "distribution">
+                            <div>$1,500 to $1,999</div>
+                            <div><span id = "4">0</span><span>%</span></div>
+                        </div>
+                        <div id = "distribution">
+                            <div>$2,000 to $2,499</div>
+                            <div><span id = "5">0</span><span>%</span></div>
+                        </div>
+                        <div id = "distribution">
+                            <div>> $3,000</div>
+                            <div><span id = "6">0</span><span>%</span></div>
+                        </div>
+                </div>
+                <div id = "rent">
+                    <h4>Rent Costs</h4>
+                    <div id = "distribution">
+                        <div id = "text">< $500</div>
+                        <div><span id = "1"></span>0<span>%</span></div>
+                    </div>
+                    <div id = "distribution">
+                        <div>$500 to $999</div>
+                        <div><span id = "2"></span>0<span>%</span></div>
+                    </div>
+                    <div id = "distribution">
+                        <div>$1,000 to $1,499</div>
+                        <div><span id = "3"></span>0<span>%</span></div>
+                    </div>
+                    <div id = "distribution">
+                        <div>$1,500 to $1,999</div>
+                        <div><span id = "4"></span>0<span>%</span></div>
+                    </div>
+                    <div id = "distribution">
+                        <div>$2,000 to $2,499</div>
+                        <div><span id = "5"></span>0<span>%</span></div>
+                    </div>
+                    <div id = "distribution">
+                        <div>> $3,000</div>
+                        <div><span id = "6"></span>0<span>%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h1>CAN YOU AFFORD IT?</h1>
         <div class = "summary">
             <div class = "summary-components">
@@ -60,19 +148,6 @@
             <h2>Transactions</h2>
             <div class = "income-items"></div>
             <div class = "expense-items"></div>
-        </div>
-    </div>
-    <div class = "container2">
-        <img id = "head-img" src="https://image.flaticon.com/icons/svg/2965/2965893.svg" alt="">
-        <h1>COST OF LIVING ESTIMATES</h1>
-        <div class = "select-area">
-            <div>search for state</div>
-            <div>search for county</div>
-            <div>search for place</div>
-        </div>
-        <div class = "housing-cost">
-            <div>median cost</div>
-            <div>housing cost standard distribution</div>
         </div>
     </div>
 </body>
