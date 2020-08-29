@@ -291,3 +291,167 @@ h3 {
 	cursor: pointer;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 500px;
+    }
+
+    .summary-img {
+        width: 50px;
+    }
+    
+    #head-img {
+        width: 100px;
+    }
+
+    #place-search {
+        width: 500px;
+    }
+
+    .select-area {
+        width: 500px;
+    }
+
+    .housing-cost {
+        width: 600px;
+        height: 450px;
+    }
+
+    #median-cost {
+        width: 500px;
+    }
+
+    .standard-distribution {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 500px;
+    }
+
+    .details {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 600px;
+    }
+
+    .summary {
+        width: 600px;
+    }
+
+    .transactions {
+        width: 600px; 
+    }
+
+    #modal-textbox,#modal-textbox2 {
+        height: 450px;
+        width: 300px;
+    }
+
+    #modal-title,#modal-title2 {
+        font-size: 20px;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 400px;
+    }
+
+    .summary-img {
+        width: 50px;
+    }
+    
+    #head-img {
+        width: 100px;
+    }
+
+    #place-search {
+        width: 400px;
+    }
+
+    .select-area {
+        width: 400px;
+    }
+
+    .housing-cost {
+        width: 400px;
+        height: 450px;
+    }
+
+    #median-cost {
+        width: 400px;
+    }
+
+    .standard-distribution {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 400px;
+    }
+
+    .details {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 400px;
+    }
+
+    .summary {
+        width: 400px;
+    }
+
+    .transactions {
+        width: 400px; 
+    }
+
+    #modal-textbox,#modal-textbox2 {
+        height: 600px;
+        width: 200px;
+    }
+
+    #modal-title,#modal-title2 {
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 17px;
+    }
+
+    h5 {
+        font-size: 13px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    #distribution {
+        font-size: 16px;
+    }
+
+}
+
+
+
