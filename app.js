@@ -26,10 +26,10 @@ const renderIncome = () => {
     let $incomeAmountItem = $incomeDiv.append($("<div>" + "$" + transactionIncomeAmounts[transactionIncomeAmounts.length - 1] + "</div>"))
     let $incomeTextItem = $incomeDiv.append($("<div>" + transactionIncomeTexts[transactionIncomeTexts.length - 1] + "</div>"))
 
-    $incomeAmountItem.children().eq(0).addClass('amount')
+    $incomeAmountItem.children().eq(0).addClass('amount').addClass('green')
     $('.income-items').append($incomeAmountItem)
 
-    $incomeTextItem.children().eq(1).addClass('text')
+    $incomeTextItem.children().eq(1).addClass('text').addClass('green')
     $('.income-items').append($incomeTextItem)
 
 }
@@ -42,10 +42,10 @@ const renderExpense = () => {
     let $expenseAmountItem = $expenseDiv.append($("<div>" + "$" + transactionExpenseAmounts[transactionExpenseAmounts.length - 1] + "</div>"))
     let $expenseTextItem = $expenseDiv.append($("<div>" + transactionExpenseTexts[transactionExpenseTexts.length - 1] + "</div>"))
 
-    $expenseAmountItem.children().eq(0).addClass('amount')
+    $expenseAmountItem.children().eq(0).addClass('amount').addClass('red')
     $('.expense-items').append($expenseAmountItem)
 
-    $expenseTextItem.children().eq(1).addClass('text')
+    $expenseTextItem.children().eq(1).addClass('text').addClass('red')
     $('.expense-items').append($expenseTextItem)
 
 }
@@ -56,7 +56,7 @@ const incomeSubmit = (event) => {
     event.preventDefault()
     transactionIncomeAmounts.push($('#income-amount').val())
     transactionIncomeTexts.push($('#income-text').val())
-    $('#income-total').text($incomeTotal += parseInt($('#income-amount').val()))
+    $('#income-total').text($incomeTotal += parseInt($('#income-amount').val())).addClass('green')
     $('#balance-total').text($balanceTotal += parseInt($('#income-amount').val()))
     $(event.currentTarget).trigger('reset')
     renderIncome()
@@ -71,7 +71,7 @@ const expenseSubmit = (event) => {
     event.preventDefault()
     transactionExpenseAmounts.push($('#expense-amount').val())
     transactionExpenseTexts.push($('#expense-text').val())
-    $('#expense-total').text($expenseTotal -= parseInt($('#expense-amount').val()))
+    $('#expense-total').text($expenseTotal -= parseInt($('#expense-amount').val())).addClass('red')
     $('#balance-total').text($balanceTotal -= parseInt($('#expense-amount').val()))
     $(event.currentTarget).trigger('reset')
     renderExpense()
@@ -130,17 +130,14 @@ $( () => {
   });
 
 
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
 // Median Housing Cost and Distribution of Housing Prices
-let state
-
 
 // Pulls costs by state search
+let state
+
 $('#state-section').on('submit', (event) => {
     event.preventDefault()
     console.log('hello')
@@ -171,6 +168,7 @@ $('#state-section').on('submit', (event) => {
                     $('#4m').text(data2[1][4])
                     $('#5m').text(data2[1][5])
                     $('#6m').text(data2[1][6])
+                    $('#mortgage').children().eq(1).addClass('red')
                 },
                 () => {
                     console.log("bad request")
@@ -191,6 +189,7 @@ $('#state-section').on('submit', (event) => {
                     $('#4r').text(data3[1][4])
                     $('#5r').text(data3[1][5])
                     $('#6r').text(data3[1][6])
+                    $('#rent').children().eq(1).addClass('red')
                 },
                 () => {
                     console.log("bad request")
