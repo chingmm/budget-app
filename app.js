@@ -112,17 +112,19 @@ $( () => {
     const $closeBtn2 = $('#close2')
   
       // same as show() function
-    const openModal2 = () => {
+    const openModal = () => {
       $modal2.css('display', 'block')
     }
   
       // same as hide() function
-    const closeModal2 = () => {
-      $modal.css('display', 'none')
+    const closeModal = () => {
+      $modal2.css('display', 'none')
     }
   
-    $openBtn2.on('click', openModal2)
-    $closeBtn2.on('click', closeModal2)
+    $openBtn2.on('click', openModal)
+    $closeBtn2.on('click', closeModal)
+
+    console.log(closeModal)
   
     // setTimeout(openModal, 5000)
   });
