@@ -20,7 +20,7 @@
                     <input type="text" placeholder="Ex: Illinois" class="place-input-box" id = "state">
                     <button type="submit" name="location" id="state-location">SEARCH</button>
                 </form>
-                <form id = "county-section">
+                <!-- <form id = "county-section">
                     <h5 id = "search">SEARCH COUNTY</h5>
                     <input type="text" placeholder="Ex: Cook County, Illinois" class="place-input-box" id = "county">
                     <button type="submit" name="location" id="county-location">SEARCH</button>
@@ -28,22 +28,41 @@
                 <form id = "place-section">  
                     <h5 id = "search">SEARCH PLACE</h5>
                     <input type="text" placeholder="Ex: Palatine Village, Illinois" class="place-input-box" id = "county">
-                    <button type="submit" name="location" id="place-location">SEARCH</button>
+                    <button type="submit" name="location" id="place-location">SEARCH</button> -->
                 </form>  
             </div>
         </div>
         <div class = "housing-cost">
-            <div><h3 id = "median-cost">Median Monthly Housing Costs</h3></div>
+            <div>
+                <h3 id = "median-cost-title">Median Monthly Housing Costs</h3>
+            </div>
             <div id = "median-cost">
                 <div id = "mortgage">
-                    <h4>Median Mortgage</h4>
+                    <div id = "median-mortgage-heading">
+                        <h4>Median Mortgage</h4>
+                        <button class = "modal-buttons" id = "openModal">
+                            <img id = "mortgage-median-info" src="https://image.flaticon.com/icons/svg/813/813837.svg" alt="">
+                        </button>
+                            <div id = "modal">
+                                <div id = "modal-textbox">
+                                    <div id = "modal-footer">
+                                        <button class="modal-buttons" id="close" href="#">Close</button>
+                                    </div>
+                                    <h1 id = "modal-title">Median Selected Monthly Owner Costs</h1>
+                                    <p>This measure divides the selected monthly owner costs distribution into two equal parts: one-half of the cases falling below the median selected monthly owner costs and one-half above the median. Medians are shown separately for units “with a mortgage” and for units “not mortgaged.” Median selected monthly owner costs are computed on the basis of a standard distribution. (See the “Median Standard Distributions section in Appendix A.) Median selected monthly owner costs are rounded to the nearest whole dollar.</p>
+                                </div>
+                            </div>
+                        </div>
                     <div id = "median-mortgage">
                         <span>$</span>
                         <span id = "mortgage-amount">0</span>
                     </div>
                 </div>
                 <div id = "rent">
-                    <h4>Median Rent</h4>
+                    <div id = "median-rent-heading">
+                        <h4>Median Rent</h4>
+                        <img id = "rent-median-info" src="https://image.flaticon.com/icons/svg/813/813837.svg" alt="">
+                    </div>
                     <div id = "median-rent">
                         <span>$</span>
                         <span id = "rent-amount">0</span>

@@ -81,6 +81,59 @@ $('#expense').on('submit', expenseSubmit)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
+// Median Mortgage Information Modal
+$( () => {
+    const $openBtn = $('#openModal')
+    const $modal = $('#modal')
+    const $closeBtn = $('#close')
+  
+      // same as show() function
+    const openModal = () => {
+      $modal.css('display', 'block')
+    }
+  
+      // same as hide() function
+    const closeModal = () => {
+      $modal.css('display', 'none')
+    }
+  
+    $openBtn.on('click', openModal)
+    $closeBtn.on('click', closeModal)
+  
+    // setTimeout(openModal, 5000)
+  });
+
+
+
+  // Median Rent Information Modal
+$( () => {
+    const $openBtn2 = $('#openModal2')
+    const $modal2 = $('#modal2')
+    const $closeBtn2 = $('#close2')
+  
+      // same as show() function
+    const openModal2 = () => {
+      $modal2.css('display', 'block')
+    }
+  
+      // same as hide() function
+    const closeModal2 = () => {
+      $modal.css('display', 'none')
+    }
+  
+    $openBtn2.on('click', openModal2)
+    $closeBtn2.on('click', closeModal2)
+  
+    // setTimeout(openModal, 5000)
+  });
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
 // Median Housing Cost and Distribution of Housing Prices
 let state
 
@@ -149,16 +202,6 @@ $('#state-section').on('submit', (event) => {
         }
     )
 })
-
-
-
-
-
-
-
-
-
-
 
 
 // API urls
