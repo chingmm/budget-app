@@ -1,8 +1,8 @@
 Technologies Used:
-Javascript
-JQuery
-HTML
-CSS
+- Javascript
+- JQuery
+- HTML
+- CSS
 
 
 Approach Taken:
