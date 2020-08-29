@@ -12,32 +12,41 @@
     <div class = "container">
         <img id = "head-img" src="https://image.flaticon.com/icons/svg/3348/3348765.svg" alt="">
         <h1>COST OF LIVING ESTIMATES</h1>
-        <img class = "summary-img" src="https://image.flaticon.com/icons/svg/1738/1738292.svg" alt="">
+        <div><img class = "summary-img" src="https://image.flaticon.com/icons/svg/1738/1738292.svg" alt=""></div>
         <div class = "select-area">
-            <form id = "place-search">
-                <h5 id = "search">Search State</h5>
-                <input type="text" placeholder="Ex: Illinois" class="place-input-box" id = "state">
-                <h5 id = "search">Search County</h5>
-                <input type="text" placeholder="Ex: Cook County, Illinois" class="place-input-box" id = "county">
-                <h5 id = "search">Search Place</h5>
-                <input type="text" placeholder="Ex: Palatine Village, Illinois" class="place-input-box" id = "county">
-            </form>
+            <div id = "place-search">
+                <form id = "state-section">
+                    <h5 id = "search">SEARCH STATE</h5>
+                    <input type="text" placeholder="Ex: Illinois" class="place-input-box" id = "state">
+                    <button type="submit" name="location" id="state-location">SEARCH</button>
+                </form>
+                <form id = "county-section">
+                    <h5 id = "search">SEARCH COUNTY</h5>
+                    <input type="text" placeholder="Ex: Cook County, Illinois" class="place-input-box" id = "county">
+                    <button type="submit" name="location" id="county-location">SEARCH</button>
+                </form>
+                <form id = "place-section">  
+                    <h5 id = "search">SEARCH PLACE</h5>
+                    <input type="text" placeholder="Ex: Palatine Village, Illinois" class="place-input-box" id = "county">
+                    <button type="submit" name="location" id="place-location">SEARCH</button>
+                </form>  
+            </div>
         </div>
         <div class = "housing-cost">
-            <h3 id = "median-cost">Median Monthly Housing Costs</h3>
+            <div><h3 id = "median-cost">Median Monthly Housing Costs</h3></div>
             <div id = "median-cost">
                 <div id = "mortgage">
                     <h4>Median Mortgage</h4>
                     <div id = "median-mortgage">
                         <span>$</span>
-                        <span>0</span>
+                        <span id = "mortgage-amount">0</span>
                     </div>
                 </div>
                 <div id = "rent">
                     <h4>Median Rent</h4>
                     <div id = "median-rent">
                         <span>$</span>
-                        <span>0</span>
+                        <span id = "rent-amount">0</span>
                     </div>
                 </div>
             </div>
@@ -47,54 +56,54 @@
                     <h4>Mortgage Costs</h4>
                         <div id = "distribution">
                             <div id = "text">< $500</div>
-                            <div><span id = "1">0</span><span>%</span></div>
+                            <div><span id = "1m">0</span><span>%</span></div>
                         </div>
                         <div id = "distribution">
                             <div>$500 to $999</div>
-                            <div><span id = "2">0</span><span>%</span></div>
+                            <div><span id = "2m">0</span><span>%</span></div>
                         </div>
                         <div id = "distribution">
                             <div>$1,000 to $1,499</div>
-                            <div><span id = "3">0</span><span>%</span></div>
+                            <div><span id = "3m">0</span><span>%</span></div>
                         </div>
                         <div id = "distribution">
                             <div>$1,500 to $1,999</div>
-                            <div><span id = "4">0</span><span>%</span></div>
+                            <div><span id = "4m">0</span><span>%</span></div>
                         </div>
                         <div id = "distribution">
                             <div>$2,000 to $2,499</div>
-                            <div><span id = "5">0</span><span>%</span></div>
+                            <div><span id = "5m">0</span><span>%</span></div>
                         </div>
                         <div id = "distribution">
                             <div>> $3,000</div>
-                            <div><span id = "6">0</span><span>%</span></div>
+                            <div><span id = "6m">0</span><span>%</span></div>
                         </div>
                 </div>
                 <div id = "rent">
                     <h4>Rent Costs</h4>
                     <div id = "distribution">
                         <div id = "text">< $500</div>
-                        <div><span id = "1"></span>0<span>%</span></div>
+                        <div><span id = "1r"></span>0<span>%</span></div>
                     </div>
                     <div id = "distribution">
                         <div>$500 to $999</div>
-                        <div><span id = "2"></span>0<span>%</span></div>
+                        <div><span id = "2r"></span>0<span>%</span></div>
                     </div>
                     <div id = "distribution">
                         <div>$1,000 to $1,499</div>
-                        <div><span id = "3"></span>0<span>%</span></div>
+                        <div><span id = "3r"></span>0<span>%</span></div>
                     </div>
                     <div id = "distribution">
                         <div>$1,500 to $1,999</div>
-                        <div><span id = "4"></span>0<span>%</span></div>
+                        <div><span id = "4r"></span>0<span>%</span></div>
                     </div>
                     <div id = "distribution">
                         <div>$2,000 to $2,499</div>
-                        <div><span id = "5"></span>0<span>%</span></div>
+                        <div><span id = "5r"></span>0<span>%</span></div>
                     </div>
                     <div id = "distribution">
                         <div>> $3,000</div>
-                        <div><span id = "6"></span>0<span>%</span></div>
+                        <div><span id = "6r"></span>0<span>%</span></div>
                     </div>
                 </div>
             </div>

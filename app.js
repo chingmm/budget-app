@@ -79,23 +79,85 @@ const expenseSubmit = (event) => {
 
 $('#expense').on('submit', expenseSubmit)
 
-
+//////////////////////////////////////////////////////////////////////////////////////////
 
 // Median Housing Cost and Distribution of Housing Prices
+let state
 
-// Pulls state
-$.ajax({
-    url:`https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME&for=state:*&key=89452c179f005fd7873c90db6fca27e755ee3466`
-}).then(
-    (data) => {
-        for (let i = 1; i < data.length; i++){
-        console.log(data[i][0])
+
+// Pulls costs by state search
+$('#state-section').on('submit', (event) => {
+    event.preventDefault()
+    console.log('hello')
+    console.log($('#state').val())
+    // Pulls state from search
+    $.ajax({
+        url:`https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME&for=state:*&key=89452c179f005fd7873c90db6fca27e755ee3466`
+    }).then(
+        data => {
+            for (let i = 1; i < data.length; i++){
+                if (data[i][0] === $('#state').val()){
+                console.log(data[i][0])
+                state = data[i][1]
+                console.log(state)
+                }
+            }
+
+            // Pulls mortgage cost data based on state
+            $.ajax({
+                url: `https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME,CP04_2014_2018_094E,CP04_2014_2018_095E,CP04_2014_2018_096E,CP04_2014_2018_097E,CP04_2014_2018_098E,CP04_2014_2018_099E,CP04_2014_2018_100E,CP04_2014_2018_101E&for=state:${state}&key=89452c179f005fd7873c90db6fca27e755ee3466`
+            }).then(
+                (data2) => {
+                    console.log(data2[1])
+                    $('#mortgage-amount').text(data2[1][8])
+                    $('#1m').text(data2[1][1])
+                    $('#2m').text(data2[1][2])
+                    $('#3m').text(data2[1][3])
+                    $('#4m').text(data2[1][4])
+                    $('#5m').text(data2[1][5])
+                    $('#6m').text(data2[1][6])
+                },
+                () => {
+                    console.log("bad request")
+                }
+            )
+
+
+            // Pulls rent cost data based on state
+            $.ajax({
+                url: `https://api.census.gov/data/2018/acs/acs5/cprofile/?get=NAME,CP04_2014_2018_127E,CP04_2014_2018_128E,CP04_2014_2018_129E,CP04_2014_2018_130E,CP04_2014_2018_131E,CP04_2014_2018_132E,CP04_2014_2018_133E,CP04_2014_2018_134E&for=state:${state}&key=89452c179f005fd7873c90db6fca27e755ee3466`
+            }).then(
+                (data3) => {
+                    console.log(data3[1])
+                    $('#rent-amount').text(data3[1][8])
+                    $('#1r').text(data3[1][1])
+                    $('#2r').text(data3[1][2])
+                    $('#3r').text(data3[1][3])
+                    $('#4r').text(data3[1][4])
+                    $('#5r').text(data3[1][5])
+                    $('#6r').text(data3[1][6])
+                },
+                () => {
+                    console.log("bad request")
+                }
+            )
+            
+
+        },
+        () => {
+            console.log("bad request")
         }
-    },
-    () => {
-        console.log("bad request")
-    }
-)
+    )
+})
+
+
+
+
+
+
+
+
+
 
 
 
